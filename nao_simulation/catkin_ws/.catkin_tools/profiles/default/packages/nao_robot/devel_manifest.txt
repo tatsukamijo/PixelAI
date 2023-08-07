@@ -1,0 +1,2 @@
+nao_robot/nao_robot
+/PixelAI/nao_simulation/catkin_ws/devel/.private/nao_robot/cmake.lock /PixelAI/nao_simulation/catkin_ws/devel/./cmake.lock

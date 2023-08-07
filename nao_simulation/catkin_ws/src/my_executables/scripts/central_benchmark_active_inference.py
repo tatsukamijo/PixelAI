@@ -91,6 +91,7 @@ class Central:
             joint['publisher'] = rospy.Publisher(topic_name, Float64, queue_size=5)
 
         self.joints = joints
+        print('Joints', joints)
         
         #Necessary for Benchmarking (Accesing/Storing logs etc.):
         self.num_cores = 50
@@ -233,7 +234,9 @@ class Central:
             cv2.waitKey(3) # a small wait time is needed for the image to be displayed correctly
 
     def set_head_angles(self,head_angle1,head_angle2): ## controls head movement
+        print('Publishing head angles')
         self.joints[0]['publisher'].publish(head_angle1)
+        print('Head angle 1 published')
         self.joints[1]['publisher'].publish(head_angle2)
 
     def set_arm_angles(self,larm_angles): ## controls left arm movement
@@ -347,17 +350,23 @@ class Central:
     def central_execute(self):
         rospy.init_node('central_node',anonymous=True) #initilizes node, sets name
         # create several topic subscribers
+        print("Central node initialized!")
         rospy.Subscriber("/nao_dcm/joint_states",JointState,self.proprioceptive_cb)
+        print("Subscribed to joint states!")
         rospy.Subscriber('/nao_robot/camera_bottom/image_raw',Image, self.image_cb)
+        print("Subscribed to camera image!")
         # srv_joint_state = rospy.ServiceProxy('/gazebo/get_joint_properties', GetJointProperties)
         rospy.Subscriber("joint_states",JointState,self.proprioceptive_cb)
+        print("Subscribed to joint states!")
 
-        rospy.sleep(2.0)
+        # rospy.sleep(2.0)
         self.set_head_angles(self.headyaw, self.headpitch)
+        print("Head has been brought to the initial position")
         time.sleep(1.0)
 
         level_id = 2
         for c in range(0, self.num_cores):
+            print('Core: ', c)
             for t in range(0, self.num_test):
                 self.reset_robot(level_id, c,t)
 
@@ -412,4 +421,5 @@ class Central:
 if __name__=='__main__':
     # instantiate class and start loop function
     central_instance = Central()
+    print("Central class initialized!")
     central_instance.central_execute()

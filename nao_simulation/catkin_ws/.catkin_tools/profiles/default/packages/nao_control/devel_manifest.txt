@@ -1,0 +1,5 @@
+nao_virtual/nao_control
+/PixelAI/nao_simulation/catkin_ws/devel/.private/nao_control/cmake.lock /PixelAI/nao_simulation/catkin_ws/devel/./cmake.lock
+/PixelAI/nao_simulation/catkin_ws/devel/.private/nao_control/share/nao_control/cmake/nao_controlConfig.cmake /PixelAI/nao_simulation/catkin_ws/devel/share/nao_control/cmake/nao_controlConfig.cmake
+/PixelAI/nao_simulation/catkin_ws/devel/.private/nao_control/share/nao_control/cmake/nao_controlConfig-version.cmake /PixelAI/nao_simulation/catkin_ws/devel/share/nao_control/cmake/nao_controlConfig-version.cmake
+/PixelAI/nao_simulation/catkin_ws/devel/.private/nao_control/lib/pkgconfig/nao_control.pc /PixelAI/nao_simulation/catkin_ws/devel/lib/pkgconfig/nao_control.pc

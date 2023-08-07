@@ -96,6 +96,7 @@ class PixelAI:
 
     def load_model(self):
         print("Loading Deconvolutional Network...")
+        # Load the generative model (visual forward model) g(mu):
         self.network = Conv_decoder()
         self.network.load_state_dict(torch.load(os.path.join(self.model_path, 'trained_model')))
         self.network = self.network.to(device)

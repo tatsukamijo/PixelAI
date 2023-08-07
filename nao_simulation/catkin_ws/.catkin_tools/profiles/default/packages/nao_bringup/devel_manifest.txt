@@ -1,0 +1,5 @@
+nao_robot/nao_bringup
+/PixelAI/nao_simulation/catkin_ws/devel/.private/nao_bringup/cmake.lock /PixelAI/nao_simulation/catkin_ws/devel/./cmake.lock
+/PixelAI/nao_simulation/catkin_ws/devel/.private/nao_bringup/share/nao_bringup/cmake/nao_bringupConfig.cmake /PixelAI/nao_simulation/catkin_ws/devel/share/nao_bringup/cmake/nao_bringupConfig.cmake
+/PixelAI/nao_simulation/catkin_ws/devel/.private/nao_bringup/share/nao_bringup/cmake/nao_bringupConfig-version.cmake /PixelAI/nao_simulation/catkin_ws/devel/share/nao_bringup/cmake/nao_bringupConfig-version.cmake
+/PixelAI/nao_simulation/catkin_ws/devel/.private/nao_bringup/lib/pkgconfig/nao_bringup.pc /PixelAI/nao_simulation/catkin_ws/devel/lib/pkgconfig/nao_bringup.pc

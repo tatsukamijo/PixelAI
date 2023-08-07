@@ -1,0 +1,5 @@
+nao_virtual/nao_gazebo_plugin
+/PixelAI/nao_simulation/catkin_ws/devel/.private/nao_gazebo_plugin/cmake.lock /PixelAI/nao_simulation/catkin_ws/devel/./cmake.lock
+/PixelAI/nao_simulation/catkin_ws/devel/.private/nao_gazebo_plugin/share/nao_gazebo_plugin/cmake/nao_gazebo_pluginConfig.cmake /PixelAI/nao_simulation/catkin_ws/devel/share/nao_gazebo_plugin/cmake/nao_gazebo_pluginConfig.cmake
+/PixelAI/nao_simulation/catkin_ws/devel/.private/nao_gazebo_plugin/share/nao_gazebo_plugin/cmake/nao_gazebo_pluginConfig-version.cmake /PixelAI/nao_simulation/catkin_ws/devel/share/nao_gazebo_plugin/cmake/nao_gazebo_pluginConfig-version.cmake
+/PixelAI/nao_simulation/catkin_ws/devel/.private/nao_gazebo_plugin/lib/pkgconfig/nao_gazebo_plugin.pc /PixelAI/nao_simulation/catkin_ws/devel/lib/pkgconfig/nao_gazebo_plugin.pc

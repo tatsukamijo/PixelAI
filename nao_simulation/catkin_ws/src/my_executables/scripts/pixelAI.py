@@ -53,6 +53,7 @@ class PixelAI:
             self.model_path = 'Conv_decoder_model/conv_decoder_sim'
         # Load network for the visual forward model
         self.load_model()
+        print("PixelAI initialized!")
 
         # Will be initialized inside the reset_pixelAI function
         self.dt = None  
@@ -98,12 +99,15 @@ class PixelAI:
         print("Loading Deconvolutional Network...")
         self.network = Conv_decoder()
         self.network.load_state_dict(torch.load(os.path.join(self.model_path, 'trained_model')))
+        print("Network loaded successfully!")
         self.network = self.network.to(device)
+        print('Device: {}'.format(device))
         # self.network.load_state_dict(torch.load(os.path.join(self.model_path,'checkpoint_cpu_version')))
         self.network.eval()
 
         #Load data range used for training for minmax-normalization:
-        data_range = np.genfromtxt(os.path.join(self.model_path,"data_range.csv"), delimiter=",")
+        # data_range = np.genfromtxt(os.path.join(self.model_path,"data_range.csv"), delimiter=",")
+        data_range = np.genfromtxt(os.path.join(self.model_path,"data_range_sim.csv"), delimiter=",")
         self.data_max = data_range[0,:]
         self.data_min = data_range[1,:]
 

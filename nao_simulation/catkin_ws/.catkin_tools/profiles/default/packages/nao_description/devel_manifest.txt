@@ -1,0 +1,6 @@
+nao_robot/nao_description
+/PixelAI/nao_simulation/catkin_ws/devel/.private/nao_description/cmake.lock /PixelAI/nao_simulation/catkin_ws/devel/./cmake.lock
+/PixelAI/nao_simulation/catkin_ws/devel/.private/nao_description/share/nao_description/cmake/nao_descriptionConfig-version.cmake /PixelAI/nao_simulation/catkin_ws/devel/share/nao_description/cmake/nao_descriptionConfig-version.cmake
+/PixelAI/nao_simulation/catkin_ws/devel/.private/nao_description/share/nao_description/cmake/nao_descriptionConfig.cmake /PixelAI/nao_simulation/catkin_ws/devel/share/nao_description/cmake/nao_descriptionConfig.cmake
+/PixelAI/nao_simulation/catkin_ws/devel/.private/nao_description/lib/nao_description/base_footprint /PixelAI/nao_simulation/catkin_ws/devel/lib/nao_description/base_footprint
+/PixelAI/nao_simulation/catkin_ws/devel/.private/nao_description/lib/pkgconfig/nao_description.pc /PixelAI/nao_simulation/catkin_ws/devel/lib/pkgconfig/nao_description.pc

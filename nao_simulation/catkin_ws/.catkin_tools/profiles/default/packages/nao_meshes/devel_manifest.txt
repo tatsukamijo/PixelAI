@@ -1,0 +1,7 @@
+nao_meshes
+/PixelAI/nao_simulation/catkin_ws/devel/.private/nao_meshes/cmake.lock /PixelAI/nao_simulation/catkin_ws/devel/./cmake.lock
+/PixelAI/nao_simulation/catkin_ws/devel/.private/nao_meshes/share/nao_meshes/cmake/nao_meshesConfig.cmake /PixelAI/nao_simulation/catkin_ws/devel/share/nao_meshes/cmake/nao_meshesConfig.cmake
+/PixelAI/nao_simulation/catkin_ws/devel/.private/nao_meshes/share/nao_meshes/cmake/nao_meshesConfig-version.cmake /PixelAI/nao_simulation/catkin_ws/devel/share/nao_meshes/cmake/nao_meshesConfig-version.cmake
+/PixelAI/nao_simulation/catkin_ws/devel/.private/nao_meshes/tmp/installer.run /PixelAI/nao_simulation/catkin_ws/devel/tmp/installer.run
+/PixelAI/nao_simulation/catkin_ws/devel/.private/nao_meshes/tmp/tmp/installer.run /PixelAI/nao_simulation/catkin_ws/devel/tmp/tmp/installer.run
+/PixelAI/nao_simulation/catkin_ws/devel/.private/nao_meshes/lib/pkgconfig/nao_meshes.pc /PixelAI/nao_simulation/catkin_ws/devel/lib/pkgconfig/nao_meshes.pc

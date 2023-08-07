@@ -1,0 +1,6 @@
+nao_robot/nao_apps
+/PixelAI/nao_simulation/catkin_ws/devel/.private/nao_apps/cmake.lock /PixelAI/nao_simulation/catkin_ws/devel/./cmake.lock
+/PixelAI/nao_simulation/catkin_ws/devel/.private/nao_apps/share/nao_apps/cmake/nao_appsConfig.cmake /PixelAI/nao_simulation/catkin_ws/devel/share/nao_apps/cmake/nao_appsConfig.cmake
+/PixelAI/nao_simulation/catkin_ws/devel/.private/nao_apps/share/nao_apps/cmake/nao_appsConfig-version.cmake /PixelAI/nao_simulation/catkin_ws/devel/share/nao_apps/cmake/nao_appsConfig-version.cmake
+/PixelAI/nao_simulation/catkin_ws/devel/.private/nao_apps/lib/python2.7/dist-packages/nao_apps/__init__.py /PixelAI/nao_simulation/catkin_ws/devel/lib/python2.7/dist-packages/nao_apps/__init__.py
+/PixelAI/nao_simulation/catkin_ws/devel/.private/nao_apps/lib/pkgconfig/nao_apps.pc /PixelAI/nao_simulation/catkin_ws/devel/lib/pkgconfig/nao_apps.pc
