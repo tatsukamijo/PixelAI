@@ -10,11 +10,19 @@ CURRENT_DIR=$(pwd)
 xhost +local:docker
 
 # Check if a container with the same name is already running
-if [ $(docker ps -q -f name=$PROJECT_NAME) ]; then
-    echo "Container with the name $PROJECT_NAME is already running."
-    echo "Entering the existing container..."
-    docker exec -it $PROJECT_NAME bash
+# Check if a container with the same name exists
+if [ $(docker ps -aq -f name=$PROJECT_NAME) ]; then
+    echo "Container with the name $PROJECT_NAME already exists."
+    if [ $(docker ps -q -f name=$PROJECT_NAME) ]; then
+        echo "Entering the existing running container..."
+        docker exec -it $PROJECT_NAME bash
+    else
+        echo "Starting the existing stopped container..."
+        docker start -ai $PROJECT_NAME
+    fi
+    exit
 fi
+
 
 # Run the Docker container
 docker run --name $PROJECT_NAME \
