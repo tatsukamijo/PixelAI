@@ -14,6 +14,37 @@ RUN apt-get install -y \
     && apt-get remove -y ros-kinetic-desktop-full ros-kinetic-gazebo* libgazebo* gazebo* \
     && rm -rf /var/lib/apt/lists/*
 
+# Update and install necessary dependencies for building Python
+RUN apt-get update && apt-get install -y \
+    build-essential \
+    libssl-dev \
+    zlib1g-dev \
+    libncurses5-dev \
+    libncursesw5-dev \
+    libreadline-dev \
+    libsqlite3-dev \
+    libgdbm-dev \
+    libdb5.3-dev \
+    libbz2-dev \
+    libexpat1-dev \
+    liblzma-dev \
+    tk-dev \
+    libffi-dev
+
+# Build Python 3.8.10 from source
+RUN wget https://www.python.org/ftp/python/3.8.10/Python-3.8.10.tgz \
+    && tar xzf Python-3.8.10.tgz \
+    && cd Python-3.8.10 \
+    && ./configure --enable-optimizations \
+    && make altinstall \
+    && cd .. && rm -rf Python-3.8.10*
+
+# Update alternatives to use Python 3.8.10
+RUN update-alternatives --install /usr/bin/python3 python3 /usr/local/bsin/python3.8 1
+
+# Install pip for Python 3.8.10
+RUN apt-get install -y python3-pip
+
 # Install Gazebo 
 RUN curl -sSL http://get.gazebosim.org | sh
 
@@ -24,6 +55,13 @@ RUN apt-get remove -y ros-kinetic-desktop-full ros-kinetic-gazebo* libgazebo* ga
 RUN pip install --upgrade "pip < 21.0" \
     && pip install http://download.pytorch.org/whl/cpu/torch-0.4.1-cp27-cp27mu-linux_x86_64.whl \
     torchvision==0.2.1
+
+# Upgrade pip for Python 3.8 and install Pytorch, torchvision, wandb, and opencv for Python 3.8
+RUN python3.8 -m pip install --upgrade pip \
+    && python3.8 -m pip install torch torchvision wandb opencv-python
+
+# remove default python3.5
+RUN apt-get remove -y python3.5
 
 # Set the working directory
 WORKDIR /PixelAI

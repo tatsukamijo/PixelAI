@@ -169,9 +169,9 @@ for epoch in range(epochs):
             loss = criterion(outputs, images)
 
             # visualize the output
-            plt.imshow(outputs[0].squeeze().cpu().detach().numpy().transpose(1, 0), cmap='gray')
-            plt.title('Output')
-            plt.show()
+            # plt.imshow(outputs[0].squeeze().cpu().detach().numpy().transpose(1, 0), cmap='gray')
+            # plt.title('Output')
+            # plt.show()
 
             print(f'Epoch [{epoch+1}/{epochs}], Batch [{batch_idx+1}/{len(dataloader)}], Loss: {loss.item()}')
 
