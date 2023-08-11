@@ -40,7 +40,7 @@ RUN wget https://www.python.org/ftp/python/3.8.10/Python-3.8.10.tgz \
     && cd .. && rm -rf Python-3.8.10*
 
 # Update alternatives to use Python 3.8.10
-RUN update-alternatives --install /usr/bin/python3 python3 /usr/local/bsin/python3.8 1
+RUN update-alternatives --install /usr/bin/python3 python3 /usr/local/bin/python3.8 1
 
 # Install pip for Python 3.8.10
 RUN apt-get install -y python3-pip
