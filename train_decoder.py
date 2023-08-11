@@ -115,7 +115,7 @@ print(f'Using device: {device}')
 
     
 # Parameters
-directory = '/home/tatsuya/test/fep_test/results_tilt_estimation/tactile'
+directory = '/PixelAI/tactile'
 batch_size = 32
 epochs = 1000
 learning_rate = 0.0001
@@ -172,6 +172,9 @@ for epoch in range(epochs):
             # plt.imshow(outputs[0].squeeze().cpu().detach().numpy().transpose(1, 0), cmap='gray')
             # plt.title('Output')
             # plt.show()
+
+            # log output image with wandb
+            wandb.log({'output': [wandb.Image(outputs[0].squeeze().cpu().detach().numpy().transpose(1, 0), caption='Output')]})
 
             print(f'Epoch [{epoch+1}/{epochs}], Batch [{batch_idx+1}/{len(dataloader)}], Loss: {loss.item()}')
 

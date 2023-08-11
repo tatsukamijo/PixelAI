@@ -58,7 +58,7 @@ RUN pip install --upgrade "pip < 21.0" \
 
 # Upgrade pip for Python 3.8 and install Pytorch, torchvision, wandb, and opencv for Python 3.8
 RUN python3.8 -m pip install --upgrade pip \
-    && python3.8 -m pip install torch torchvision wandb opencv-python
+    && python3.8 -m pip install torch torchvision wandb opencv-python scipy matplotlib 
 
 # remove default python3.5
 RUN apt-get remove -y python3.5
@@ -88,3 +88,5 @@ RUN sh -c 'echo "deb http://packages.ros.org/ros/ubuntu `lsb_release -sc` main" 
     && apt-get -y update \
     && apt-get -y install python3-catkin-tools
 
+RUN python3.8 -m pip install --upgrade urllib3==1.26.15
+RUN export PYTHONPATH=$(echo $PYTHONPATH | tr ':' '\n' | grep -v '/opt/ros/kinetic/lib/python2.7/dist-packages' | tr '\n' ':')
